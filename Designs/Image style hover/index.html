@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Style Hover</title>
+    <style>
+        .gallery{
+            display: flex;
+            height: 20rem;
+            gap: 1rem;
+        }
+
+        .gallery > div{
+            flex: 1;
+            border-radius: 1rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+        }
+
+        .gallery > div:hover{
+            flex: 8;
+
+        }
+    </style>
+  </head>
+  <body>
+    <div class="gallery">
+      <div style="background-image: url(images/img1.jpg)"></div>
+      <div style="background-image: url(images/img2.jpg)"></div>
+      <div style="background-image: url(images/img3.jpg)"></div>
+      <div style="background-image: url(images/img4.jpg)"></div>
+      <div style="background-image: url(images/img5.jpg)"></div>
+      <div style="background-image: url(images/img6.jpg)"></div>
+      <div style="background-image: url(images/img7.png)"></div>
+      <div style="background-image: url(images/img8.jpg)"></div>
+      <div style="background-image: url(images/img9.jpg)"></div>
+      <div style="background-image: url(images/img10.jpg)"></div>
+      <div style="background-image: url(images/img11.jpg)"></div>
+      <div style="background-image: url(images/img12.jpg)"></div>
+    </div>
+  </body>
+</html>

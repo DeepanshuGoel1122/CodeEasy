@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Google</title>
+</head>
+
+<body>
+    <section>
+        <div class="main">
+            <img src="google.png" alt="">
+            <div class="searchBx">
+                <input type="text" name="" class="query" value="">
+                <div class="icons">
+                    <div><img src="search.png" alt=""></div>
+                    <div><img src="mic.png" alt=""></div>
+                </div>
+            </div>
+            <div class="button">
+                <button class="searchBtn">Google Search</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let query = document.querySelector('.query');
+        let searchBtn = document.querySelector('.searchBtn');
+
+        searchBtn.onclick = function () {
+            let url = 'https://www.google.com/search?q=' + query.value;
+            window.open(url, '_self');
+        }
+    </script>
+</body>
+
+</html>

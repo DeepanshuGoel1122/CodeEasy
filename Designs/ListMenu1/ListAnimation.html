@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: consolas;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #080b1f;
+        }
+
+        ul{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        ul li{
+            list-style: none;
+        }
+
+        ul li a{
+            position: relative;
+            font-size: 2em;
+            color: #fff;
+            text-decoration: none;
+            margin: 10px 0;
+            display: inline-block;
+            padding: 0 20px;
+        }
+
+        #marker{
+            position: absolute;
+            top: 0;
+            height: 50px;
+            margin-top: -5px;
+            background-color: #2196f3;
+            transition: 0.5s;
+        }
+    </style>
+    <title>Design</title>
+</head>
+<body>
+    <ul>
+        <div id="marker"></div>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</body>
+
+<script>
+    const marker = document.querySelector('#marker');
+    const item = document.querySelectorAll('ul li a');
+
+    function indicator(e){
+        marker.style.top = e.offsetTop+'px';
+        marker.style.width = e.offsetWidth+'px';
+    }
+
+    item.forEach(link => {
+        link.addEventListener('mousemove', (e) => {
+            indicator(e.target);
+        })
+    })
+
+    
+</script>
+</html>
