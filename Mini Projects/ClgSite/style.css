@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+
+header{
+    height: 50px;
+    width: 100vw;
+    background-color: rgb(24, 26, 24);
+    position: sticky;
+    top: 0;
+    font-size: 5px;
+}
+
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(1em + 1vw);
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.navbar li{
+    background: rgb(24, 27, 24);
+    height: 49px;
+    width: 150px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    position: relative;
+    border-bottom: 1px solid rgb(75, 69, 69);
+}
+
+.navbar ul ul{
+    display: none;
+}
+
+.navbar ul ul li{
+    width: 350px;
+    font-size: 0.6em;
+}
+
+.navbar ul li:hover > ul{
+    display: block;
+}
+
+.navbar ul li:hover{
+    background: rgb(255, 0, 43);
+    transition: 0.3s;
+}
+
+.navbar ul ul ul{
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+.burger{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 5px;
+}
+
+.line{
+    width: 33px;
+    background-color: white;
+    height: 4px;
+    margin: 3px 3px;
+}
+
+
+
+/* --------------------------------Header End---------------------- */
+
+.page{
+    height: 70vh;
+    width: 100vw;
+    background: url(./images/clg.JPG);
+    background-size: 100vw 100%;
+    background-repeat: no-repeat;
+}
+
+.logos{
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logos img{
+    height: 150px;
+    width: 200px;
+    margin: 10px 25px;
+}
+
+.main{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(153, 138, 138);
+}
+
+.about{
+    font-family: 'Comic Sans MS';
+    margin: 20px 20px;
+    background: rgb(241, 238, 236);
+    
+}
+
+.about p{
+    padding: 5px;
+    font-size: 18px;
+    margin: 0px 10px;
+}
+
+.flImg{
+    width: 90vw;
+    margin: auto;
+}
+.flImg img{
+    height: 200px;
+    width: 300px;
+    margin: 10px 20px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(24, 26, 24);
+    height: 30px;
+    width: 100vw;
+    color: white;
+}
+
+
+
+
+
+@media screen and (max-width: 800px) {
+
+    header{
+        display: flex;
+        justify-content: center;
+        min-height: 50px;
+        height: 90%;
+        width: 100%;
+        position: static;
+    }
+
+    .navbar ul{
+        flex-direction: column;
+        font-size: 20px;     
+    }
+
+    .navbar li{
+        width: 100vw;
+        height: 60px;
+        
+
+        display: flex;
+        justify-content: center;
+    }
+ .navbar ul ul{
+     position: absolute;
+     top: 100%;
+     z-index: 1;
+     border: 1px solid rgb(141, 135, 135);
+     
+ }
+ .navbar ul ul ul{
+    position: absolute;
+    top: 100%;
+     left: 0;
+     z-index: 2;
+     font-size: 20px;
+ }
+
+ .navbar ul ul li{
+    font-size: 20px;
+    display: block;
+ }
+   
+ .burger{
+    display: block;
+}
+
+.navbar {
+    display: none;
+}
+
+.add_rem{
+    display: block;
+}
+
+  }
+
+  @media screen and (max-width: 500px) {
+    .logos img{
+        height: 100px;
+        width: 180px;
+        margin: 5px;
+        flex-direction: column;
+    }
+  }

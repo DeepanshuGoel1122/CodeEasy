@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive webpage</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar h-nav">
+        <ul class="navList">
+            <div class="logo"><img src="img/logo.jpg" alt="logo"></div>
+
+            <a href="#home"><li>Home</li></a>
+            <a href="#about"><li>About</li></a>
+            <a href="#service"><li>Service</li></a>
+            <a href="#contact-us"><li>Contact Us</li></a>
+        </ul>
+        <div class="rightNav">
+            <input type="text" name="search" id="search">
+            <button class="btn btn-sm">Search</button>
+        </div>
+        
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <section class="background firstSection">
+        <div class="box-main">
+            <div class="firstHalf">
+                <p class="text-big">This is the future !</p>
+                <p class="text-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, perferendis repudiandae! Quam reprehenderit accusamus, illo earum nulla ea similique maiores. Facilis atque sapiente accusantium facere assumenda deleniti fugit exercitationem est.</p>
+
+                <div class="buttons">
+                    <button class="btn">Subscribe</button>
+                    <button class="btn">Watch Video</button>
+                </div>
+            </div>
+            
+            <div class="secondHalf">
+                <img src="img/logo.jpg" alt="image" srcset="">
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-right lower">
+        <div class="paras">
+
+        
+        <p class="sectionTag text-big">End of your search</p>
+        <p class="sectionSubTag">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores animi dolorem alias autem aliquid illum repellat nam facere voluptates, non quas sed voluptate voluptatibus. Sit quia repudiandae voluptates animi quibusdam voluptatem officiis aspernatur provident tempore quos sint, eligendi saepe distinctio dicta debitis molestias illo rem labore praesentium ipsam aliquid iure omnis nesciunt mollitia. Dolor aperiam ipsam debitis, similique laudantium modi sequi itaque veritatis assumenda quod ipsa at, expedita praesentium, provident animi hic facere nostrum. Soluta sunt, nam, non cum consequatur, error maiores adipisci animi illo provident velit expedita dolores unde? Dolor ab assumenda recusandae, voluptates nobis harum consequatur autem vero?</p>
+        </div>
+
+        <div class="thumbnail">
+            <img src="img/logo.jpg" alt="image" class="imgFluid" height="200px" width="200px">
+        </div>
+    </section>
+
+    <script>
+        let burger = document.querySelector('.burger');
+        let navbar = document.querySelector('.navbar');
+        let navList = document.querySelector('.navList');
+        let rightNav = document.querySelector('.rightNav');
+        burger.addEventListener('click', ()=>{
+            navbar.classList.toggle('h-nav');
+            navList.classList.toggle('disfl');
+            rightNav.classList.toggle('disbl');
+        })
+    </script>
+</body>
+</html>

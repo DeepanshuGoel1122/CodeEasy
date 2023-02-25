@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    height: 56 px;
+}
+
+.content{
+    font-family: 'Potta One', cursive
+}
+
+.container{
+    width: 50vw;
+    margin: auto;
+    padding: 32px 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.toolbar-item button{
+    color: white !important;
+    cursor: pointer;
+}
+
+
+
+/* div.code-toolbar > .toolbar a,
+div.code-toolbar > .toolbar button,
+div.code-toolbar > .toolbar span {
+	color: white;
+	font-size: .8em;
+	padding: 0 .5em;
+	background: #f5f2f0;
+	background: rgba(224, 224, 224, 0.2);
+	box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+	border-radius: .5em;
+	cursor: pointer;
+} */

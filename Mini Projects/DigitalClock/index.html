@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Digital Clock-Desin</title>
+	<style>
+
+		*
+		{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+
+		body
+		{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			background: #060a1f;
+		}
+
+		#clock h2
+		{
+			position: relative;
+			display: block;
+			color: #fff;
+			text-align: center;
+			margin: 10px 0;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.4em;
+			font-size: 0.8em;
+		}
+
+		#clock #time
+		{
+			display: flex;
+		}
+
+		#clock #time div
+		{
+			position: relative;
+			margin: 0 5px;
+			-webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+		}
+
+		#clock #time div span
+		{
+			position: relative;
+			display: block;
+			height: 100px;
+			width: 80px;
+			background: #2196f3;
+			color: #fff;
+			font-weight: 300;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 3em;
+			z-index: 10;
+			box-shadow: 0 0 0 1px rgba(0,0,0,.2);
+		}
+
+		#clock #time div span:nth-child(2)
+		{
+			height: 30px;
+			font-size: 0.7em;
+			letter-spacing: 0.2em;
+			font-weight: 500;
+			z-index: 9;
+			box-shadow: none;
+			background: #127fd6;
+			text-transform: uppercase;
+		}
+
+		#clock #time div:last-child span
+		{
+			background: #ff006a;
+		}
+
+		#clock #time div:last-child span:nth-child(2)
+		{
+			background: #ec0062;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="clock">
+		<h2>The Time Is Now</h2>
+			<div id="time">
+				<div><span id="hour">00</span><span>Hours</span></div>
+				<div><span id="minutes">00</span><span>Minutes</span></div>
+				<div><span id="seconds">00</span><span>Seconds</span></div>
+			</div>
+	</div>
+
+	<script type="text/javascript">
+
+		function clock(){
+			var hours = document.getElementById('hour');
+			var minutes = document.getElementById('minutes');
+			var seconds = document.getElementById('seconds');
+
+
+			var h2 = new Date();
+			var h = (h2.getHours()+24)%12||12;
+			var m = new Date().getMinutes();
+			var s = new Date().getSeconds();
+
+			hours.innerHTML = h;
+			minutes.innerHTML = m;
+			seconds.innerHTML = s;
+		}
+
+
+		var interval = setInterval(clock,1000);
+
+	</script>
+
+</body>
+</html>

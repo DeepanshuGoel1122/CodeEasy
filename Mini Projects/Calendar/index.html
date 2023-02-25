@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calender-Design</title>
+
+	    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+       *
+       {
+           margin: 0px;
+           padding: 0px;
+           box-sizing: border-box;
+           font-family: 'Poppins' , sans-serif;
+       }
+       body
+       {
+       	display: flex;
+       	justify-content: center;
+       	align-items: center;
+       	min-height: 100vh;
+       	background: #ff006a;
+        /*url(https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80);*/
+       	background-size: cover;
+       	background-position: center;
+       }
+       .calender
+       {
+       	position: relative;
+       	width: 200px;
+       	background: #fff;
+       	text-align: center;
+       	border-radius: 8px;
+       	overflow: hidden;
+       	-webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0004);
+       }
+       .calender #monthName
+       {
+       	position: relative;
+       	padding: 5px 10px;
+       	background: #ff6331;
+       	color: #fff;
+       	font-size: 30px;
+       	font-weight: 700;
+       }
+
+       .calender #dayName
+       {
+       	margin-top: 20px;
+       	font-size: 20px;
+       	font-weight: 300;
+       	color: #999;
+       }
+
+        .calender #dayNumber
+       {
+       	margin-top: 0px;
+		line-height: 1em; 
+       	font-size: 80px;
+       	font-weight: 700;
+       	color: #333;
+       }
+
+        .calender #year
+       {
+       	margin-bottom: 20px;
+       	font-size: 20px;
+       	font-weight: 500;
+       	color: #999;
+       }
+
+         #code-url {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 5px 5px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+    </style>
+</head>
+<body>
+	<div class="calender">
+		<p id="monthName"></p>
+		<p id="dayName"></p>
+		<p id="dayNumber"></p>
+		<p id="year"></p>
+	</div>
+
+    <a href="https://github.com/DeepanshuGoel1122/HTML-Design/tree/main/Designs/Calendar" target="_blank" id="code-url"><img src="../icon.png" 
+
+height=32 width=32></a>
+
+	<script>
+        const lang = navigator.language;
+
+        let today = new Date();
+
+        let month = document.getElementById("monthName").innerHTML = today.toLocaleString(lang, { month: 'long' });
+        let day = document.getElementById("dayName").innerHTML = today.toLocaleString(lang, { weekday: 'long' });
+        let date = document.getElementById("dayNumber").innerHTML = today.getDate();
+        let year = document.getElementById("year").innerHTML = today.getFullYear();
+	</script>
+</body>
+</html>
