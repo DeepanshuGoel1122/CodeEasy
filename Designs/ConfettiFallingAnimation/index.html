@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Falling Animation</title>
+</head>
+
+<body>
+    <div class="container">
+        <p>Congratulations<br><span>You Learnt it</span></p>
+
+        <div class="button" onmousedown="party.confetti(this)">Hurray</div>
+    </div>
+
+
+
+    <script src="confetti.js"></script> <!-- Confetti JS -->
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+    <!-- Party JJS Used on Button -->
+    <script>
+
+        const Start = () => {
+            setTimeout(function () {
+                startConfetti();
+            }, 1000);
+        };
+
+        const Stop = () => {
+            setTimeout(function () {
+                stopConfetti();
+            }, 6000);
+        };
+
+        Start();
+        Stop();
+
+
+        // Party JS Script 
+        party.confetti(runButton, {
+            count: party.variation.range(50, 100),
+            shapes: ["star", "roundedSquare","rectangle","square"],
+        });
+    </script>
+</body>
+
+</html>

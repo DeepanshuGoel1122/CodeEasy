@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+    font-family: consolas;
+}
+
+.container{
+    position: relative;
+    width: 450px;
+    min-height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
+}
+
+.container:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+}
+
+.container:after{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg,#fff007,#6eff00);
+    pointer-events: none;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        filter: blur(60px) hue-rotate(0deg);
+    }
+
+    100%{
+        filter: blur(60px) hue-rotate(360deg);
+    }
+}
+
+.form{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.form h2{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+}
+
+.form .inputBox{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form .inputBox input{
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    font-size: 18px;
+    color: #fff;
+    padding: 5px 0;
+    font-family: consolas;
+}
+
+/* ::placeholder{
+    color: #eee;
+} */
+
+.form .inputBox input[type='submit']{
+    background-color: #fff;
+    color: #000;
+    border: none;
+    font-weight: 900;
+    max-width: 100px;
+    cursor: pointer;
+}
+

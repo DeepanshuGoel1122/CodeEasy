@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(155, 186, 253);
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 30%;
+    padding: 10px;
+    background-color: rgb(6, 70, 167);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    clip-path: circle(11.8% at 100% 0);
+    transition: .5s;
+}
+
+.box:hover{
+    clip-path: circle(141.4% at 100% 0);
+}

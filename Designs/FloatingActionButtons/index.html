@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Floating Action Buttons</title>
+</head>
+<body>
+    <div class="action" onclick="actionToggle()">
+        <span>+</span>
+        <ul>
+            <li><img src="facebook.png" alt="">Share on Facebook</li>
+            <li><img src="twitter.png" alt="">Share on Twitter</li>
+            <li><img src="instagram.png" alt="">Share on Instagram</li>
+            <li><img src="youtube.png" alt="">Share on Youtube</li>
+            <li><img src="linkedin.png" alt="">Share on Linkedin</li>
+        </ul>
+    </div>
+
+
+    <script>
+        function actionToggle(){
+            let action = document.querySelector('.action');
+            action.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

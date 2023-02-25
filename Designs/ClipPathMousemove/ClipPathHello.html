@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        section h2{
+            position: relative;
+            font-size: 14em;
+            color: #111;
+            font-weight: 300;
+            cursor: default;
+            z-index: 1;
+        }
+
+        .circle{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #ff2562;
+            pointer-events: none;
+            transition: 0.1s;
+            clip-path: circle(50px at var(--x) var(--y));
+        }
+
+        section h2:hover ~ .circle{
+            background: #64ff14;
+            clip-path: circle(150px at var(--x) var(--y));
+        }
+    </style>
+    <title>ClipPath</title>
+</head>
+<body>
+    <section>
+        <h2>Hello</h2>
+        <h2>Welcome</h2>
+        <div class="circle"></div>
+    </section>
+
+
+    <script>
+        const pos = document.documentElement;
+        pos.addEventListener('mousemove', e => {
+            pos.style.setProperty('--x', e.clientX + 'px');
+            pos.style.setProperty('--y', e.clientY + 'px');
+        })
+    </script>
+</body>
+
+</html>

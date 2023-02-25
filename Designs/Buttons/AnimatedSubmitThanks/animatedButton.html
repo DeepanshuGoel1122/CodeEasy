@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Buttton</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .hero{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+            background: #e3ebfe;
+        }
+        button{
+            width: 270px;
+            height: 80px;
+            border: 0;
+            outline: none;
+            background: #2f2f2f;
+            color: #fff;
+            font-size: 22px;
+            border-radius: 40px;
+            text-align: center;
+            box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .checkbox{
+            width: 80px;
+            height: 80px;
+            border-radius: 40px;
+            box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            right: -40;
+            opacity: 0;
+        }
+        .checkbox svg{
+            width: 40px;
+            margin: 20px;
+        }
+        svg path{
+            stroke-width: 3;
+            stroke: #fff;
+            stroke-dasharray: 34;
+            stroke-dashoffset: 34;
+            stroke-linecap: round;
+        }
+        .active{
+            background: #ff2b75;
+            transition: 1s;
+        }
+        .active .checkbox{
+            right: 0;
+            opacity: 1;
+            transition: 1s;
+        }
+        .active p{
+            margin-right: 125px;
+            transition: 1s;
+        }
+        .active svg path{
+            stroke-dashoffset: 0;
+            transition: 1s;
+            transition-delay: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <button id="btn">
+            <p id="btnText">Submit</p>
+            <div class="checkbox">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                    <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                    <path  fill="blue" d="M0 12.116l2.053-1.897c2.401 1.162 3.924 2.045 6.622 3.969 5.073-5.757 8.426-8.678 14.657-12.555l.668 1.536c-5.139 4.484-8.902 9.479-14.321 19.198-3.343-3.936-5.574-6.446-9.679-10.251z"/> -->
+                </svg>
+            </div>
+        </button>
+    </div>
+</body>
+
+<script>
+    var btn = document.getElementById("btn");
+    var btnText = document.getElementById("btnText");
+
+    btn.onclick = function(){
+        btnText.innerHTML = "Thanks";
+        btn.classList.add("active");
+    }
+</script>
+</html>

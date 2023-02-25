@@ -1,0 +1,25 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #110b10;
+}
+
+.blob {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+}
+
+.blob:nth-child(2) {
+    filter: blur(50px);
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Animated Search Bar</title>
+</head>
+<body>
+    <div class="search">
+        <div class="icon"></div>
+        <div class="input">
+            <input type="text" placeholder="Search" id="mySearch">
+        </div>
+        <span class="clear" onclick="document.getElementById('mySearch').value = ''"></span>
+    </div>
+
+
+    <script>
+        const icon = document.querySelector('.icon');
+        const search = document.querySelector('.search');
+
+        icon.onclick = function(){
+            search.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

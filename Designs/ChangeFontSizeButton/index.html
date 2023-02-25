@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Font Size</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .container{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1200px;
+            flex-direction: column;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .container .buttons{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .container .buttons .btn{
+            padding: 0 10px;
+            display: inline-flex;
+            background: #ddd;
+            color: #fff;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .container .buttons .btn.active{
+            background: #444;
+        }
+
+        .container .buttons .btn:nth-child(2){
+            font-size: 1.5em;
+        }
+
+        .container .buttons .btn:nth-child(3){
+            font-size: 2em;
+        }
+
+        .container .content{
+            font-size: 1em;
+            color: #444;
+        }
+
+        .container .content h2,
+        .container .content p{
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="buttons">
+            <span class="btn active" onclick="document.getElementById('text').style.fontSize = '1em'">A</span>
+            <span class="btn" onclick="document.getElementById('text').style.fontSize = '1.25em'">A</span>
+            <span class="btn" onclick="document.getElementById('text').style.fontSize = '1.75em'">A</span>
+        </div>
+        <div class="content" id="text">
+            <h2>Change Font Size</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis asperiores veritatis ex saepe odit, repudiandae eveniet, nesciunt at sed fuga eius eum aspernatur harum sequi vitae quis est enim ad! Ad culpa laudantium quos minima? Soluta libero suscipit optio beatae, iusto enim totam reprehenderit, tempore illo officiis ad consequatur porro explicabo rerum molestiae vel odio laboriosam iure, reiciendis doloremque fuga sint. Odit, dicta hic tenetur totam ab ipsa in facere sequi exercitationem magnam tempore doloremque impedit molestiae dignissimos nemo voluptatibus autem ducimus distinctio ratione. Illo, impedit! Velit, exercitationem! Nisi provident illum, blanditiis accusamus dignissimos temporibus molestiae eius esse sunt voluptate hic fuga dolorum recusandae. Numquam quibusdam aut modi ab? Nostrum veniam animi, commodi, impedit quis, odio aliquam molestias rem id molestiae perspiciatis harum quidem ex non doloribus pariatur cumque dolores quod? Cum inventore eaque repudiandae dolorum velit. Veritatis adipisci, aperiam qui iste dolor laboriosam quae vero delectus harum neque autem corrupti atque sapiente rerum dolores provident porro velit incidunt quisquam reprehenderit dolorem fuga expedita totam facilis? Saepe quam quia earum aspernatur praesentium at nemo aut, quis error a dolore similique nesciunt dolorem quas aliquam! Soluta optio animi laboriosam quasi excepturi labore quaerat tempora omnis. Aut possimus ratione officia sequi quam.</p>
+        </div>
+    </div>
+
+
+
+    <script>
+        let buttons = document.querySelector('.buttons');
+        let btn = buttons.querySelectorAll('.btn');
+
+        for(var i=0; i<btn.length; i++){
+            btn[i].addEventListener('click', function(){
+                let current = document.getElementsByClassName('active');
+                current[0].className = current[0].className.replace("active", "");
+                this.className += " active";
+            })
+        }
+    </script>
+</body>
+</html>
