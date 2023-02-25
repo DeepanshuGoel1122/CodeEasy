@@ -4,37 +4,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Reggae One', cursive;
 }
 
 .container{
-    height: 100vh;
     width: 100%;
     background: #fafafa;
-    padding: 0 8%;
-    
+    padding: 0 8%; 
 }
 
-.Header{
+.header{
     text-align: center;
     padding-top: 2%;
     margin-bottom: 60px;
-    font-weight: 800;
+    font-size: 3rem;
+    font-weight: 600;
     position: relative;
+    color: #f95959;
 }
 
-.category{
-    margin-top: 50px;
-}
-
-.heading{
-    color: #f58c14;
-    margin-bottom: 20px;
-}
-
-.Header::after{
+.header::after{
     content: '';
-    background: #757df0;
+    background: #5585b5;
     width: 100px;
     height: 5px;
     position: absolute;
@@ -43,66 +34,82 @@
     transform: translateX(-50%);
 }
 
+.category{
+    margin-top: 50px;
+}
+
+.heading{
+    color: #ff9a3c;
+    margin-bottom: 20px;
+}
+
+
 .row{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 30px;
 }
 
-.services{
-    /* text-align: center; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 10px;
-    border-radius: 5px;
-    font-size: 18px;
+.card{
+    border-radius: 8px;
+    font-size: 15px;
     cursor: pointer;
-    border: 2px solid #E5E7EB;
-    background: transparent;
+    min-height: 72px;
+    background: #ffffff;
     transition: transform 0.5s, background 0.5s;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-
-.services h3{
+.card a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #393e46;
+}
+.card a h3{
     font-weight: 600;
-    margin-bottom: 8px;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 10px;
+    text-align: center;
 }
 
-.services:hover{
-    background: #757df0;
+
+.card:hover{
+    background: #79c2d0;
     color: #fff;
-    transform: scale(1.02);
-    /* transform: scale(0.9); */
+    transform: scale(1.05);
 }
 
-.services:hover h3{
+.card:hover a h3{
     color: #fff;
 }
 
-.services a{
+.card a{
     text-decoration: none;
     color: #000;
+    width: 100%;
+    height: 100%;
 }
 
-.footer{
-    position: relative;
+
+footer{
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 50px;
-    background-color: #757df0;
+    height: 45px;
+    background-color: #5585b5;
     color: #fff;
-    bottom: 0;
-    margin-top: 5px;
+    margin-top: 40px;
 }
 
-.footer p{
+footer p{
     margin-top: 10px;
 }
 
-.footer img{
-    margin-top: 5px;
+footer img{
+    margin-top: 4px;
 }
 
+/* Design and developed by: Deepanshu Goel 
+Github : DeepanshuGoel1122
+All projects mentioned in this are made by me. */
