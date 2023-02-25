@@ -50,7 +50,10 @@
 }
 
 .services{
-    text-align: center;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px 10px;
     border-radius: 5px;
     font-size: 18px;
@@ -62,7 +65,7 @@
 }
 
 
-.services h2{
+.services h3{
     font-weight: 600;
     margin-bottom: 8px;
 }
@@ -74,7 +77,7 @@
     /* transform: scale(0.9); */
 }
 
-.services:hover h2{
+.services:hover h3{
     color: #fff;
 }
 
