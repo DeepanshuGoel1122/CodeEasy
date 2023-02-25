@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Random Bg Changer</title>
+</head>
+
+<body>
+    <section>
+        <h2>Random</h2>
+    </section>
+
+
+    <script>
+        function changeBg() {
+            const images = [
+                'url(img/wall1.jpg)',
+                'url(img/wall2.jpg)',
+                'url(img/wall3.jpg)',
+                'url(img/wall4.jpg)',
+                'url(img/wall5.jpg)',
+                'url(img/wall6.jpg)',
+                'url(img/wall7.jpg)',
+                'url(img/wall8.jpg)',
+                'url(img/wall9.jpg)'
+            ];
+
+
+            const section = document.querySelector('section');
+            const bg = images[Math.floor(Math.random() * images.length)];
+            section.style.backgroundImage = bg;
+        }
+
+        setInterval(changeBg, 1000);
+    </script>
+</body>
+
+</html>

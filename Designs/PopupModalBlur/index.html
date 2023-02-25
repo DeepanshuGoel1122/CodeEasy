@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Popup Modal</title>
+</head>
+<body>
+    <div class="container" id="blur">
+        <div class="content">
+            <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique quos fugit ab vitae odit quis veniam tempore corrupti ut architecto.</h2>
+            <img src="bg.jpg" alt="">
+            <a href="#" onclick="toggle()">Read More</a>
+        </div>
+    </div>
+
+
+    <div id="popup">
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque aliquid suscipit, pariatur iure voluptatem quibusdam!</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In animi tempora, consectetur quidem modi libero, expedita possimus sequi adipisci explicabo dolorem inventore ad, labore obcaecati.</p>
+        <a href="#" onclick="toggle()">Close</a>
+    </div>
+
+    <script>
+        function toggle(){
+            let blur = document.getElementById('blur');
+            blur.classList.toggle('active');
+
+            let popup = document.getElementById('popup');
+            popup .classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
