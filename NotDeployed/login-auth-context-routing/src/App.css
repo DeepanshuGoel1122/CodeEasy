@@ -1,0 +1,108 @@
+.navBar{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.navBar .navLinks a{
+    color: white;
+    margin: 15px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: rgb(52, 54, 54);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.navBar .navLinks a:hover{
+    background-color: rgb(28, 29, 29);
+}
+
+.navBar .name{
+    position: absolute;
+    right: 0;
+    color: white;
+    margin: 15px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: rgb(52, 54, 54);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.home{
+    background-color: rgb(56, 56, 55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+
+.home .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 60px;
+}
+
+.login, .profile{
+    background-color: rgb(56, 56, 55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+
+.login .container, .profile .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.login .container .inputBox{
+    width: 60%;
+    background: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.login .container .inputBox input{
+    width: 90%;
+    outline: none;
+    border: none;
+    padding: 10px 5px;
+    font-size: 30px;
+}
+
+.login .container .loginBtn, .profile .container .logoutBtn{
+    color: white;
+    margin: 15px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: rgb(52, 54, 52);
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.login .container .loginBtn:hover{
+    background-color: rgb(74, 228, 108);
+}
+
+
+.profile .container .logoutBtn:hover{
+    background-color: rgb(228, 84, 74);
+}
